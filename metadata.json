@@ -1,0 +1,6 @@
+{
+  "name": "Nearby Places Finder",
+  "description": "A highly responsive and elegant nearby places finder that helps users locate restaurants, cafes, hospitals, hotels, ATMs, and parks around them or in a searched location, with live Leaflet interactive map integration, Local Storage favorites and history, and a modern Dark Mode.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

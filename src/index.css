@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Stencil the key brand colors */
+  --color-rose-500: #f43f5e;
+  --color-rose-500-value: 244, 63, 94;
+  --color-amber-500: #f59e0b;
+  --color-amber-500-value: 245, 158, 11;
+  --color-red-500: #ef4444;
+  --color-red-500-value: 239, 68, 68;
+  --color-emerald-500: #10b981;
+  --color-emerald-500-value: 16, 185, 129;
+  --color-indigo-500: #6366f1;
+  --color-indigo-500-value: 99, 102, 241;
+  --color-blue-500: #3b82f6;
+  --color-blue-500-value: 59, 130, 246;
+  --color-teal-500: #14b8a6;
+  --color-teal-500-value: 20, 184, 166;
+  --color-violet-500: #8b5cf6;
+  --color-violet-500-value: 139, 92, 246;
+}
+
+/* Custom Micro Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.4);
+}
+
+/* Leaflet Popup overrides for high end modern glass card */
+.leaflet-popup-content-wrapper {
+  background: rgba(30, 41, 59, 0.98); /* Tailored dark slate popup with modern padding */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.2) !important;
+  color: #fff !important;
+  padding: 4px !important;
+}
+
+/* Standardize Leaflet styles default overrides */
+.leaflet-container {
+  font-family: inherit !important;
+}
+
+.leaflet-popup-tip {
+  background: #1e293b !important;
+  border-bottom: 0 !important;
+}
+
+/* When dark class is omitted in document tag, keep popup default elegant light theme */
+html:not(.dark) .leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #0f172a !important;
+}
+
+html:not(.dark) .leaflet-popup-tip {
+  background: #ffffff !important;
+}
+
+/* Disable ugly map boundary outlines */
+.leaflet-container :focus {
+  outline: none;
+}
+
+.custom-div-icon {
+  background: none !important;
+  border: none !important;
+}
+
+.custom-pulse-icon {
+  background: none !important;
+  border: none !important;
+}
